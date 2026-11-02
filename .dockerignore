@@ -1,10 +1,15 @@
-# Build context for ml-service/Dockerfile is the project root; send only what that image copies.
+# Build context for the ML image (root Dockerfile and ml-service/Dockerfile) is the repository root.
+# Send only what the image copies: ml-service/{requirements.txt,budget_ml,app,scripts,models,reports} and data/.
 frontend/
 backend/
 **/.venv/
 **/__pycache__/
 **/.pytest_cache/
 ml-service/tests/
-.env
 .git/
+.claude/
 *.md
+
+# never send secrets or local settings into a build
+**/.env
+**/.env.*
