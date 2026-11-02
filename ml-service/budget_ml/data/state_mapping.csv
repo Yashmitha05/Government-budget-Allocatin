@@ -1,0 +1,40 @@
+code,name,category,formed_fiscal_year,aliases
+AN,Andaman and Nicobar Islands,UT,,Andaman & Nicobar Islands
+AP,Andhra Pradesh,STATE,,
+AR,Arunachal Pradesh,STATE,,
+AS,Assam,STATE,,
+BR,Bihar,STATE,,
+CH,Chandigarh,UT,,
+CG,Chhattisgarh,STATE,,
+DN,Dadra and Nagar Haveli,UT,,Dadra & Nagar Haveli
+DD,Daman and Diu,UT,,Daman & Diu
+DH,Dadra and Nagar Haveli and Daman and Diu,UT,2020-21,Dadra & Nagar Haveli & Daman & Diu|Dadra & Nagar Haveli and Daman & Diu
+DL,Delhi,UT_LEGISLATURE,,NCT Delhi|NCT of Delhi
+GA,Goa,STATE,,
+GJ,Gujarat,STATE,,
+HR,Haryana,STATE,,
+HP,Himachal Pradesh,STATE,,
+JK,Jammu and Kashmir,STATE,,Jammu & Kashmir
+JH,Jharkhand,STATE,,
+KA,Karnataka,STATE,,
+KL,Kerala,STATE,,
+LA,Ladakh,UT,2019-20,
+LD,Lakshadweep,UT,,
+MP,Madhya Pradesh,STATE,,
+MH,Maharashtra,STATE,,
+MN,Manipur,STATE,,
+ML,Meghalaya,STATE,,
+MZ,Mizoram,STATE,,
+NL,Nagaland,STATE,,
+OD,Odisha,STATE,,Orissa
+PY,Puducherry,UT_LEGISLATURE,,Pondicherry
+PB,Punjab,STATE,,
+RJ,Rajasthan,STATE,,
+SK,Sikkim,STATE,,
+TN,Tamil Nadu,STATE,,
+TG,Telangana,STATE,2014-15,
+TR,Tripura,STATE,,
+UP,Uttar Pradesh,STATE,,
+UK,Uttarakhand,STATE,,Uttaranchal
+WB,West Bengal,STATE,,
+ALL,All States and UTs,AGGREGATE,,All India

@@ -1,0 +1,18 @@
+# environments and dependencies (recreated by pip install / npm install)
+ml-service/.venv/
+frontend/node_modules/
+
+# build output and caches (regenerated automatically)
+backend/target/
+frontend/dist/
+__pycache__/
+.pytest_cache/
+
+# Trained seed models in ml-service/models/ ARE committed (117 KB): the ML image ships them as the initial
+# registry, and production versions created later are persisted in Cloudflare R2.
+
+# local secrets and editor/tool settings
+.env
+.claude/
+.vscode/
+.idea/

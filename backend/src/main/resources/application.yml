@@ -1,0 +1,70 @@
+# Configuration comes from environment variables; for local development the project-root .env file
+# is imported as a properties file (it is git-ignored).
+spring:
+  application:
+    name: budget-backend
+  config:
+    import: optional:file:../.env[.properties],optional:file:.env[.properties]
+  datasource:
+    # Neon (production): jdbc:postgresql://<host>/<db>?sslmode=require  (SSL is required by Neon)
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/budget_intel}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:}
+    hikari:
+      maximum-pool-size: ${DB_POOL_SIZE:5}
+      minimum-idle: ${DB_MIN_IDLE:1}
+      # Neon suspends idle compute; drop pooled connections before its idle timeout closes them
+      max-lifetime: ${DB_MAX_LIFETIME_MS:240000}
+      idle-timeout: ${DB_IDLE_TIMEOUT_MS:120000}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc.batch_size: 500
+        order_inserts: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  mvc:
+    problemdetails:
+      enabled: false
+  jackson:
+    # one JSON convention end to end: React <-> backend <-> ML service all use snake_case
+    property-naming-strategy: SNAKE_CASE
+    deserialization:
+      fail-on-unknown-properties: false
+
+server:
+  # Cloud Run injects PORT; SERVER_PORT kept for local use
+  port: ${PORT:${SERVER_PORT:8080}}
+  error:
+    include-stacktrace: never
+    include-message: never
+
+app:
+  ml:
+    base-url: ${ML_SERVICE_URL:http://localhost:8000}
+    connect-timeout-ms: ${ML_CONNECT_TIMEOUT_MS:3000}
+    read-timeout-ms: ${ML_TIMEOUT_MS:120000}
+    # shared secret sent as X-ML-Api-Key; must equal the ML service's ML_API_KEY
+    api-key: ${ML_API_KEY:}
+    # on Cloud Run with a private ML service: attach a Google ID token (audience = base-url)
+    gcp-id-token: ${ML_AUTH_GCP_ID_TOKEN:false}
+  cors:
+    # comma-separated origins or patterns, e.g. https://budget-intel.pages.dev,https://*.budget-intel.pages.dev
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+
+logging:
+  level:
+    com.budgetintel: INFO

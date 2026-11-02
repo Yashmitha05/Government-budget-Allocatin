@@ -1,0 +1,10 @@
+# Build context for ml-service/Dockerfile is the project root; send only what that image copies.
+frontend/
+backend/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+ml-service/tests/
+.env
+.git/
+*.md

@@ -1,0 +1,1391 @@
+{
+  "duplicates_collapsed": 0,
+  "parse_logs": {
+    "gross_fiscal_deficit": {
+      "missing_cells": {
+        "TG": 10,
+        "PY": 1
+      },
+      "unresolved_labels": [
+        "-: Not Available. A: Actual. RE: Revised Estimates. BE: Budget Estimates.",
+        "2. Figures in respect of Jammu & Kashmir relate to revised estimates from 2004-0",
+        "3. Figures in respect of Manipur relate to revised estimates from 2004-05 to 200",
+        "4. Figures in respect of Jharkhand relate to revised estimates from 2004-05 to 2",
+        "Notes: 1. Minus sign (-) indicates surplus in deficit indicator.",
+        "Sources: 'Handbook of Statistics on State Government Finances-2010' and 'State F"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_164(i)",
+        "T_164(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "revenue_deficit": {
+      "missing_cells": {
+        "TG": 10,
+        "PY": 1
+      },
+      "unresolved_labels": [
+        "-: Not Available. A: Actual. RE: Revised Estimates. BE: Budget Estimates.",
+        "2. Figures in respect of Jammu & Kashmir relate to revised estimates from 2004-0",
+        "3. Figures in respect of Manipur relate to revised estimates from 2004-05 to 200",
+        "4. Figures in respect of Jharkhand relate to revised estimates from 2004-05 to 2",
+        "Notes: 1. Minus sign (-) indicates surplus in deficit indicator.",
+        "Sources: 'Handbook of Statistics on State Government Finances-2010' and 'State F"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_165(i)",
+        "T_165(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "revenue_expenditure": {
+      "missing_cells": {
+        "PY": 1,
+        "TG": 10
+      },
+      "unresolved_labels": [
+        "-: Not Available. A: Actual. RE: Revised Estimates. BE: Budget Estimates.",
+        "Source: State Finances: A Study of Budgets, Reserve Bank of India, various issue"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_166(i)",
+        "T_166(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "own_tax_revenue": {
+      "missing_cells": {
+        "TG": 10,
+        "PY": 1
+      },
+      "unresolved_labels": [
+        "-: Not Available. A: Actual. RE: Revised Estimates. BE: Budget Estimates.",
+        "2. Figures in respect of Manipur relate to revised estimates from 2004-05 to 200",
+        "3. Figures in respect of Jharkhand relate to revised estimates from 2004-05 to 2",
+        "Notes: 1. Figures in respect of Jammu & Kashmir relate to revised estimates from",
+        "Sources: \u2018Handbook of Statistics on State Government Finances-2010\u2019 and \u2018State F"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_168(i)",
+        "T_168(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "own_non_tax_revenue": {
+      "missing_cells": {
+        "TG": 10,
+        "PY": 1
+      },
+      "unresolved_labels": [
+        "-: Not Available. A: Actual. RE: Revised Estimates. BE: Budget Estimates.",
+        "2. Figures in respect of Manipur relate to revised estimates from 2004-05 to 200",
+        "3. Figures in respect of Jharkhand relate to revised estimates from 2004-05 to 2",
+        "Notes: 1. Figures in respect of Jammu & Kashmir relate to revised estimates from",
+        "Sources: \u2018Handbook of Statistics on State Government Finances-2010\u2019 and \u2018State F"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_169(i)",
+        "T_169(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "interest_payments": {
+      "missing_cells": {
+        "TG": 10,
+        "PY": 1
+      },
+      "unresolved_labels": [
+        "-: Not Available. A: Actual. RE: Revised Estimates. BE: Budget Estimates.",
+        "2. Figures in respect of Manipur relate to revised estimates from 2004-05 to 200",
+        "3. Figures in respect of Jharkhand relate to revised estimates from 2004-05 to 2",
+        "Notes: 1. Figures in respect of Jammu & Kashmir relate to revised estimates from",
+        "Sources: \u2018Handbook of Statistics on State Government Finances-2010\u2019 and \u2018State F"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_170(i)",
+        "T_170(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "pension": {
+      "missing_cells": {
+        "TG": 10,
+        "PY": 1
+      },
+      "unresolved_labels": [
+        "-: Not Available. A: Actual. RE: Revised Estimates. BE: Budget Estimates.",
+        "2. Figures in respect of Manipur relate to revised estimates from 2004-05 to 200",
+        "3. Figures in respect of Jharkhand relate to revised estimates from 2004-05 to 2",
+        "Notes: 1. Figures in respect of Jammu & Kashmir relate to revised estimates from",
+        "Sources: \u2018Handbook of Statistics on State Government Finances-2010\u2019 and \u2018State F"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_171(i)",
+        "T_171(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "capital_receipts": {
+      "missing_cells": {},
+      "unresolved_labels": [
+        "-: Not Available. A: Actual. RE: Revised Estimates. BE: Budget Estimates.",
+        "Sources: State Finances: A Study of Budgets, Reserve Bank of India, various issu"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_172(i)",
+        "T_172(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "capital_expenditure": {
+      "missing_cells": {
+        "TG": 10,
+        "PY": 1
+      },
+      "unresolved_labels": [
+        "-: Not Available. A: Actual. RE: Revised Estimates. BE: Budget Estimates.",
+        "2. Figures in respect of Manipur relate to revised estimates from 2004-05 to 200",
+        "3. Figures in respect of Jharkhand relate to revised estimates from 2004-05 to 2",
+        "Notes: 1. Figures in respect of Jammu & Kashmir relate to revised estimates from",
+        "Sources: \u2018Handbook of Statistics on State Government Finances-2010\u2019 and \u2018State F"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_173(i)",
+        "T_173(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "capital_outlay": {
+      "missing_cells": {
+        "TG": 10,
+        "PY": 1
+      },
+      "unresolved_labels": [
+        "-: Not Available. A: Actual. RE: Revised Estimates. BE: Budget Estimates.",
+        "2. Figures in respect of Manipur relate to revised estimates from 2004-05 to 200",
+        "3. Figures in respect of Jharkhand relate to revised estimates from 2004-05 to 2",
+        "Notes: 1. Figures in respect of Jammu & Kashmir relate to revised estimates from",
+        "Sources: \u2018Handbook of Statistics on State Government Finances-2010\u2019 and \u2018State F"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_174(i)",
+        "T_174(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "social_sector_expenditure": {
+      "missing_cells": {
+        "TG": 10,
+        "PY": 1
+      },
+      "unresolved_labels": [
+        "-: Not Available. A: Actual. RE: Revised Estimates. BE: Budget Estimates.",
+        "2. Figures in respect of Manipur relate to revised estimates from 2004-05 to 200",
+        "3. Figures in respect of Jharkhand relate to revised estimates from 2004-05 to 2",
+        "Notes: 1. Figures in respect of Jammu & Kashmir relate to revised estimates from",
+        "Sources: \u2018Handbook of Statistics on State Government Finances-2010\u2019 and \u2018State F"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_175(i)",
+        "T_175(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "health_expenditure": {
+      "missing_cells": {
+        "AN": 4,
+        "CH": 4,
+        "DN": 4,
+        "DD": 4,
+        "LD": 4,
+        "TG": 2
+      },
+      "unresolved_labels": [
+        "- : Not Available.",
+        "Source: National Health Profile (NHP) various issues, Central Bureau of Health I"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_18"
+      ],
+      "sheets_skipped": []
+    },
+    "per_capita_nsdp_current": {
+      "missing_cells": {
+        "AN": 1,
+        "CH": 1,
+        "GA": 1,
+        "GJ": 2,
+        "LA": 6,
+        "MN": 1,
+        "MZ": 1,
+        "NL": 1,
+        "SK": 1
+      },
+      "unresolved_labels": [
+        "*: For the years 2011-12 till 2018-19, figures relate to Jammu and Kashmir & Lad",
+        "-: Not Available.",
+        "Source: National Statistical Office, Ministry of Statistics and Programme Implem"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_19(i)",
+        "T_19(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "gsdp_current": {
+      "missing_cells": {
+        "AN": 1,
+        "CH": 1,
+        "GA": 1,
+        "GJ": 2,
+        "LA": 6,
+        "MN": 1,
+        "MZ": 1,
+        "NL": 1,
+        "SK": 1
+      },
+      "unresolved_labels": [
+        "*: For the years 2011-12 till 2018-19, figures relate to Jammu and Kashmir & Lad",
+        "-: Not Available.",
+        "Source: National Statistical Office, Ministry of Statistics and Programme Implem"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_21(i)",
+        "T_21(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "gsdp_constant": {
+      "missing_cells": {
+        "AN": 1,
+        "CH": 1,
+        "GA": 1,
+        "GJ": 2,
+        "MN": 1,
+        "MZ": 1,
+        "NL": 1,
+        "SK": 1
+      },
+      "unresolved_labels": [
+        "*: For the years 2011-12 till 2018-19, figures relate to Jammu and Kashmir & Lad",
+        "-: Not Available.",
+        "Source: National Statistical Office, Ministry of Statistics and Programme Implem"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_22(i)",
+        "T_22(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "nsdp_current": {
+      "missing_cells": {
+        "AN": 1,
+        "CH": 1,
+        "GA": 1,
+        "GJ": 2,
+        "LA": 6,
+        "MN": 1,
+        "MZ": 1,
+        "NL": 1,
+        "SK": 1
+      },
+      "unresolved_labels": [
+        "*: For the years 2011-12 till 2018-19, figures relate to Jammu and Kashmir & Lad",
+        "-: Not Available.",
+        "Source: National Statistical Office, Ministry of Statistics and Programme Implem"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_23(i)",
+        "T_23(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "cpi_inflation": {
+      "missing_cells": {},
+      "unresolved_labels": [
+        "2. For calculating State-wise Consumer Price Index (CPI) inflation in 2020-21 th",
+        "3. For 2021-22, annual inflation for all states is calculated using data from Ju",
+        "4. Figures for Jammu & Kashmir from October 2019 pertain to combined Union Terri",
+        "Notes: 1. Data for Arunachal Pradesh is not available.",
+        "Source: Ministry of Statistics and Programme Implementation, Government of India"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_108"
+      ],
+      "sheets_skipped": []
+    },
+    "infant_mortality_rate": {
+      "missing_cells": {
+        "TG": 10,
+        "DD": 4
+      },
+      "unresolved_labels": [
+        "*: Figures for Dadra & Nagar Haveli include Daman & Diu as well.",
+        ".: Not Applicable; - : Not Available.",
+        "Source: Sample Registration System (SRS) Bulletin, various issues, Office of the"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_4(i)",
+        "T_4(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "road_length": {
+      "missing_cells": {
+        "TG": 9
+      },
+      "unresolved_labels": [
+        ".: Not Applicable. @: Figures for Andhra Pradesh till 2013-14 include that of Te",
+        "Source: Ministry of Road Transport and Highways, Government of India."
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_146(i)",
+        "T_146(ii)"
+      ],
+      "sheets_skipped": []
+    },
+    "unemployment_rural": {
+      "missing_cells": {
+        "CG": 2,
+        "DL": 1,
+        "JH": 2,
+        "TG": 5,
+        "UK": 2,
+        "CH": 2,
+        "DN": 1,
+        "DD": 5,
+        "LA": 7
+      },
+      "unresolved_labels": [
+        ".: Not Applicable. -: Not Available. *: Figures for Dadra & Nagar Haveli include",
+        "2. Employment figures are the sum of principal status and subsidiary status.",
+        "Notes: 1. Data up to 2011\u201312 are from the NSS 68th Round (last Employment and Un",
+        "Sources: NSSO Employment & Unemployment Survey Reports; and Periodic Labour Forc"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_8(iii)"
+      ],
+      "sheets_skipped": [
+        "T_8(i)",
+        "T_8(ii)"
+      ]
+    },
+    "unemployment_urban": {
+      "missing_cells": {
+        "CG": 2,
+        "JH": 2,
+        "SK": 1,
+        "TG": 5,
+        "UK": 2,
+        "DN": 2,
+        "DD": 4,
+        "LA": 7
+      },
+      "unresolved_labels": [
+        ".: Not Applicable. -: Not Available. *: Figures for Dadra & Nagar Haveli include",
+        "2. Employment figures are the sum of principal status and subsidiary status.",
+        "Notes: 1. Data up to 2011\u201312 are from the NSS 68th Round (last Employment and Un",
+        "Sources: NSSO Employment & Unemployment Survey Reports; and Periodic Labour Forc"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_9(iii)"
+      ],
+      "sheets_skipped": [
+        "T_9(i)",
+        "T_9(ii)"
+      ]
+    },
+    "gross_enrolment_ratio": {
+      "missing_cells": {},
+      "unresolved_labels": [
+        "*: Gross Enrolment Ratio (GER) is calculated using Pre-Primary enrolments in rec",
+        "Note: These values pertain to the NEP 2020 framework. Under this framework, scho",
+        "Source: Report on Unified District Information System for Education Plus (UDISE+"
+      ],
+      "unparseable_cells": [],
+      "sheets_used": [
+        "T_1(i)",
+        "T_1(ii)",
+        "T_1(iii)"
+      ],
+      "sheets_skipped": []
+    }
+  },
+  "aggregate_check": {
+    "gross_fiscal_deficit": {
+      "median_abs_rel_diff": 0.0,
+      "max_abs_rel_diff": 2e-05,
+      "years_compared": 21
+    },
+    "revenue_deficit": {
+      "median_abs_rel_diff": 3e-05,
+      "max_abs_rel_diff": 0.00112,
+      "years_compared": 21
+    },
+    "revenue_expenditure": {
+      "median_abs_rel_diff": 0.01721,
+      "max_abs_rel_diff": 0.02125,
+      "years_compared": 21
+    },
+    "own_tax_revenue": {
+      "median_abs_rel_diff": 0.0,
+      "max_abs_rel_diff": 1e-05,
+      "years_compared": 21
+    },
+    "own_non_tax_revenue": {
+      "median_abs_rel_diff": 1e-05,
+      "max_abs_rel_diff": 4e-05,
+      "years_compared": 21
+    },
+    "interest_payments": {
+      "median_abs_rel_diff": 0.0,
+      "max_abs_rel_diff": 4e-05,
+      "years_compared": 21
+    },
+    "pension": {
+      "median_abs_rel_diff": 1e-05,
+      "max_abs_rel_diff": 5e-05,
+      "years_compared": 21
+    },
+    "capital_receipts": {
+      "median_abs_rel_diff": 0.0008,
+      "max_abs_rel_diff": 0.00388,
+      "years_compared": 21
+    },
+    "capital_expenditure": {
+      "median_abs_rel_diff": 0.0,
+      "max_abs_rel_diff": 2e-05,
+      "years_compared": 21
+    },
+    "capital_outlay": {
+      "median_abs_rel_diff": 0.0,
+      "max_abs_rel_diff": 3e-05,
+      "years_compared": 21
+    },
+    "social_sector_expenditure": {
+      "median_abs_rel_diff": 0.02208,
+      "max_abs_rel_diff": 0.03119,
+      "years_compared": 21
+    }
+  },
+  "outlier_flags": [
+    {
+      "state_code": "AP",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2005-06",
+      "previous": 2558.0,
+      "value": 64.0,
+      "log_change": -3.688
+    },
+    {
+      "state_code": "AP",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2022-23",
+      "previous": 8611.0,
+      "value": 43488.0,
+      "log_change": 1.619
+    },
+    {
+      "state_code": "AR",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2015-16",
+      "previous": 13537.0,
+      "value": 65131.0,
+      "log_change": 1.571
+    },
+    {
+      "state_code": "AR",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2013-14",
+      "previous": 232.0,
+      "value": 1606.0,
+      "log_change": 1.935
+    },
+    {
+      "state_code": "AR",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2018-19",
+      "previous": 313.0,
+      "value": 1976.0,
+      "log_change": 1.843
+    },
+    {
+      "state_code": "AS",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2017-18",
+      "previous": 143.0,
+      "value": 1350.0,
+      "log_change": 2.245
+    },
+    {
+      "state_code": "AS",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2022-23",
+      "previous": 959.0,
+      "value": 12072.0,
+      "log_change": 2.533
+    },
+    {
+      "state_code": "AS",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2023-24",
+      "previous": 12072.0,
+      "value": 1396.0,
+      "log_change": -2.157
+    },
+    {
+      "state_code": "BR",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2023-24",
+      "previous": 758339.0,
+      "value": 139859.0,
+      "log_change": -1.69
+    },
+    {
+      "state_code": "BR",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2021-22",
+      "previous": 11325.0,
+      "value": 422.0,
+      "log_change": -3.29
+    },
+    {
+      "state_code": "BR",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2022-23",
+      "previous": 422.0,
+      "value": 11288.0,
+      "log_change": 3.286
+    },
+    {
+      "state_code": "CG",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2008-09",
+      "previous": 128.0,
+      "value": 1027.0,
+      "log_change": 2.082
+    },
+    {
+      "state_code": "CG",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2023-24",
+      "previous": 4691.0,
+      "value": 37062.0,
+      "log_change": 2.067
+    },
+    {
+      "state_code": "CH",
+      "indicator": "unemployment_rural",
+      "fiscal_year": "2019-20",
+      "previous": 16.0,
+      "value": 99.0,
+      "log_change": 1.823
+    },
+    {
+      "state_code": "CH",
+      "indicator": "unemployment_rural",
+      "fiscal_year": "2020-21",
+      "previous": 99.0,
+      "value": 15.0,
+      "log_change": -1.887
+    },
+    {
+      "state_code": "DD",
+      "indicator": "cpi_inflation",
+      "fiscal_year": "2020-21",
+      "previous": 0.8,
+      "value": 6.9,
+      "log_change": 2.155
+    },
+    {
+      "state_code": "DL",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2011-12",
+      "previous": 4826.0,
+      "value": 932.0,
+      "log_change": -1.644
+    },
+    {
+      "state_code": "DL",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2023-24",
+      "previous": 4509.0,
+      "value": 622.0,
+      "log_change": -1.981
+    },
+    {
+      "state_code": "DL",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2024-25",
+      "previous": 622.0,
+      "value": 10379.0,
+      "log_change": 2.815
+    },
+    {
+      "state_code": "DL",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2007-08",
+      "previous": 410.0,
+      "value": 2041.0,
+      "log_change": 1.605
+    },
+    {
+      "state_code": "DL",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2020-21",
+      "previous": 417.0,
+      "value": 6708.0,
+      "log_change": 2.778
+    },
+    {
+      "state_code": "DL",
+      "indicator": "own_non_tax_revenue",
+      "fiscal_year": "2011-12",
+      "previous": 4189.0,
+      "value": 461.0,
+      "log_change": -2.207
+    },
+    {
+      "state_code": "DL",
+      "indicator": "unemployment_rural",
+      "fiscal_year": "2018-19",
+      "previous": 35.0,
+      "value": 5.0,
+      "log_change": -1.946
+    },
+    {
+      "state_code": "DN",
+      "indicator": "unemployment_rural",
+      "fiscal_year": "2020-21",
+      "previous": 10.0,
+      "value": 52.0,
+      "log_change": 1.649
+    },
+    {
+      "state_code": "DN",
+      "indicator": "unemployment_urban",
+      "fiscal_year": "2018-19",
+      "previous": 1.0,
+      "value": 18.0,
+      "log_change": 2.89
+    },
+    {
+      "state_code": "GA",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2005-06",
+      "previous": 123.0,
+      "value": 22.0,
+      "log_change": -1.721
+    },
+    {
+      "state_code": "GJ",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2005-06",
+      "previous": 4037.0,
+      "value": 399.0,
+      "log_change": -2.314
+    },
+    {
+      "state_code": "GJ",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2009-10",
+      "previous": 66.0,
+      "value": 6966.0,
+      "log_change": 4.659
+    },
+    {
+      "state_code": "HP",
+      "indicator": "cpi_inflation",
+      "fiscal_year": "2018-19",
+      "previous": 4.6,
+      "value": 0.5,
+      "log_change": -2.219
+    },
+    {
+      "state_code": "HP",
+      "indicator": "cpi_inflation",
+      "fiscal_year": "2019-20",
+      "previous": 0.5,
+      "value": 3.5,
+      "log_change": 1.946
+    },
+    {
+      "state_code": "HP",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2009-10",
+      "previous": 130.0,
+      "value": 805.0,
+      "log_change": 1.823
+    },
+    {
+      "state_code": "HR",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2008-09",
+      "previous": 1264.0,
+      "value": 6558.0,
+      "log_change": 1.646
+    },
+    {
+      "state_code": "JH",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2009-10",
+      "previous": 7040.0,
+      "value": 68594.0,
+      "log_change": 2.277
+    },
+    {
+      "state_code": "JH",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2021-22",
+      "previous": 14911.0,
+      "value": 2604.0,
+      "log_change": -1.745
+    },
+    {
+      "state_code": "JK",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2010-11",
+      "previous": 4633.0,
+      "value": 62958.0,
+      "log_change": 2.609
+    },
+    {
+      "state_code": "JK",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2018-19",
+      "previous": 2778.0,
+      "value": 13208.0,
+      "log_change": 1.559
+    },
+    {
+      "state_code": "LA",
+      "indicator": "unemployment_urban",
+      "fiscal_year": "2020-21",
+      "previous": 10.0,
+      "value": 86.0,
+      "log_change": 2.152
+    },
+    {
+      "state_code": "LD",
+      "indicator": "cpi_inflation",
+      "fiscal_year": "2016-17",
+      "previous": 5.1,
+      "value": 1.1,
+      "log_change": -1.534
+    },
+    {
+      "state_code": "LD",
+      "indicator": "cpi_inflation",
+      "fiscal_year": "2017-18",
+      "previous": 1.1,
+      "value": 5.0,
+      "log_change": 1.514
+    },
+    {
+      "state_code": "MH",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2010-11",
+      "previous": 8006.0,
+      "value": 592.0,
+      "log_change": -2.604
+    },
+    {
+      "state_code": "MH",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2022-23",
+      "previous": 16374.0,
+      "value": 1937.0,
+      "log_change": -2.135
+    },
+    {
+      "state_code": "MH",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2023-24",
+      "previous": 1937.0,
+      "value": 19532.0,
+      "log_change": 2.311
+    },
+    {
+      "state_code": "ML",
+      "indicator": "cpi_inflation",
+      "fiscal_year": "2016-17",
+      "previous": 7.5,
+      "value": 0.6,
+      "log_change": -2.526
+    },
+    {
+      "state_code": "ML",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2017-18",
+      "previous": 699.0,
+      "value": 137.0,
+      "log_change": -1.63
+    },
+    {
+      "state_code": "ML",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2018-19",
+      "previous": 137.0,
+      "value": 2026.0,
+      "log_change": 2.694
+    },
+    {
+      "state_code": "ML",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2020-21",
+      "previous": 152.0,
+      "value": 815.0,
+      "log_change": 1.679
+    },
+    {
+      "state_code": "MN",
+      "indicator": "cpi_inflation",
+      "fiscal_year": "2023-24",
+      "previous": 1.4,
+      "value": 10.0,
+      "log_change": 1.966
+    },
+    {
+      "state_code": "MN",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2012-13",
+      "previous": 1047.0,
+      "value": 1.0,
+      "log_change": -6.954
+    },
+    {
+      "state_code": "MP",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2020-21",
+      "previous": 2801.0,
+      "value": 18356.0,
+      "log_change": 1.88
+    },
+    {
+      "state_code": "MZ",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2017-18",
+      "previous": 18815.0,
+      "value": 3070.0,
+      "log_change": -1.813
+    },
+    {
+      "state_code": "MZ",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2018-19",
+      "previous": 3070.0,
+      "value": 26204.0,
+      "log_change": 2.144
+    },
+    {
+      "state_code": "MZ",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2021-22",
+      "previous": 1869.0,
+      "value": 373.0,
+      "log_change": -1.612
+    },
+    {
+      "state_code": "NL",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2021-22",
+      "previous": 1301.0,
+      "value": 261.0,
+      "log_change": -1.606
+    },
+    {
+      "state_code": "NL",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2022-23",
+      "previous": 261.0,
+      "value": 1563.0,
+      "log_change": 1.79
+    },
+    {
+      "state_code": "OD",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2005-06",
+      "previous": 1366.0,
+      "value": 276.0,
+      "log_change": -1.599
+    },
+    {
+      "state_code": "OD",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2009-10",
+      "previous": 334.0,
+      "value": 2265.0,
+      "log_change": 1.914
+    },
+    {
+      "state_code": "PB",
+      "indicator": "capital_expenditure",
+      "fiscal_year": "2017-18",
+      "previous": 49761.0,
+      "value": 9789.0,
+      "log_change": -1.626
+    },
+    {
+      "state_code": "PB",
+      "indicator": "capital_outlay",
+      "fiscal_year": "2019-20",
+      "previous": 2412.0,
+      "value": 17828.0,
+      "log_change": 2.0
+    },
+    {
+      "state_code": "PY",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2009-10",
+      "previous": 1060.0,
+      "value": 4987.0,
+      "log_change": 1.549
+    },
+    {
+      "state_code": "PY",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2016-17",
+      "previous": 17530.0,
+      "value": 1668.0,
+      "log_change": -2.352
+    },
+    {
+      "state_code": "PY",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2023-24",
+      "previous": 2301.0,
+      "value": 37473.0,
+      "log_change": 2.79
+    },
+    {
+      "state_code": "PY",
+      "indicator": "cpi_inflation",
+      "fiscal_year": "2016-17",
+      "previous": 8.4,
+      "value": 1.3,
+      "log_change": -1.866
+    },
+    {
+      "state_code": "PY",
+      "indicator": "own_non_tax_revenue",
+      "fiscal_year": "2011-12",
+      "previous": 743.0,
+      "value": 153.0,
+      "log_change": -1.58
+    },
+    {
+      "state_code": "PY",
+      "indicator": "own_non_tax_revenue",
+      "fiscal_year": "2013-14",
+      "previous": 118.0,
+      "value": 1193.0,
+      "log_change": 2.314
+    },
+    {
+      "state_code": "PY",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2015-16",
+      "previous": 42.0,
+      "value": 197.0,
+      "log_change": 1.546
+    },
+    {
+      "state_code": "PY",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2020-21",
+      "previous": 55.0,
+      "value": 628.0,
+      "log_change": 2.435
+    },
+    {
+      "state_code": "RJ",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2009-10",
+      "previous": 827.0,
+      "value": 4747.0,
+      "log_change": 1.747
+    },
+    {
+      "state_code": "SK",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2014-15",
+      "previous": 53.0,
+      "value": 275.0,
+      "log_change": 1.646
+    },
+    {
+      "state_code": "TR",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2023-24",
+      "previous": 47056.0,
+      "value": 5916.0,
+      "log_change": -2.074
+    },
+    {
+      "state_code": "TR",
+      "indicator": "cpi_inflation",
+      "fiscal_year": "2015-16",
+      "previous": 13.0,
+      "value": 2.7,
+      "log_change": -1.572
+    },
+    {
+      "state_code": "TR",
+      "indicator": "gross_fiscal_deficit",
+      "fiscal_year": "2008-09",
+      "previous": 17.0,
+      "value": 270.0,
+      "log_change": 2.765
+    },
+    {
+      "state_code": "UK",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2005-06",
+      "previous": 950.0,
+      "value": 74.0,
+      "log_change": -2.552
+    },
+    {
+      "state_code": "UK",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2010-11",
+      "previous": 1171.0,
+      "value": 13.0,
+      "log_change": -4.501
+    },
+    {
+      "state_code": "UK",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2016-17",
+      "previous": 1852.0,
+      "value": 383.0,
+      "log_change": -1.576
+    },
+    {
+      "state_code": "UK",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2017-18",
+      "previous": 383.0,
+      "value": 1978.0,
+      "log_change": 1.642
+    },
+    {
+      "state_code": "UP",
+      "indicator": "capital_receipts",
+      "fiscal_year": "2023-24",
+      "previous": 2972310.0,
+      "value": 572859.0,
+      "log_change": -1.646
+    },
+    {
+      "state_code": "UP",
+      "indicator": "own_non_tax_revenue",
+      "fiscal_year": "2020-21",
+      "previous": 81705.0,
+      "value": 11846.0,
+      "log_change": -1.931
+    },
+    {
+      "state_code": "UP",
+      "indicator": "revenue_deficit",
+      "fiscal_year": "2005-06",
+      "previous": 6993.0,
+      "value": 1268.0,
+      "log_change": -1.707
+    }
+  ],
+  "structural_breaks": {
+    "AP": [
+      "2014-15"
+    ],
+    "JK": [
+      "2019-20",
+      "2020-21"
+    ]
+  },
+  "population_sum_vs_wdi": {
+    "2011-12": 0.9666,
+    "2012-13": 0.9655,
+    "2013-14": 0.9647,
+    "2014-15": 0.9646,
+    "2015-16": 0.9651,
+    "2016-17": 0.9655,
+    "2017-18": 0.9667,
+    "2018-19": 0.9653,
+    "2019-20": 0.9657,
+    "2020-21": 0.9666,
+    "2021-22": 0.9685,
+    "2022-23": 0.9704,
+    "2023-24": 0.9206,
+    "2024-25": 0.9131
+  },
+  "coverage": [
+    {
+      "indicator": "capital_expenditure",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 32,
+      "records": 661
+    },
+    {
+      "indicator": "capital_outlay",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 32,
+      "records": 661
+    },
+    {
+      "indicator": "capital_receipts",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 32,
+      "records": 672
+    },
+    {
+      "indicator": "committed_expenditure",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 31,
+      "records": 640
+    },
+    {
+      "indicator": "cpi_inflation",
+      "first_year": "2014-15",
+      "last_year": "2024-25",
+      "states": 36,
+      "records": 396
+    },
+    {
+      "indicator": "ger_foundational",
+      "first_year": "2022-23",
+      "last_year": "2024-25",
+      "states": 37,
+      "records": 111
+    },
+    {
+      "indicator": "ger_middle",
+      "first_year": "2022-23",
+      "last_year": "2024-25",
+      "states": 37,
+      "records": 111
+    },
+    {
+      "indicator": "ger_preparatory",
+      "first_year": "2022-23",
+      "last_year": "2024-25",
+      "states": 37,
+      "records": 111
+    },
+    {
+      "indicator": "ger_secondary",
+      "first_year": "2022-23",
+      "last_year": "2024-25",
+      "states": 37,
+      "records": 111
+    },
+    {
+      "indicator": "gross_fiscal_deficit",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 32,
+      "records": 661
+    },
+    {
+      "indicator": "gsdp_constant",
+      "first_year": "2011-12",
+      "last_year": "2024-25",
+      "states": 33,
+      "records": 453
+    },
+    {
+      "indicator": "gsdp_current",
+      "first_year": "2011-12",
+      "last_year": "2024-25",
+      "states": 34,
+      "records": 455
+    },
+    {
+      "indicator": "health_expenditure",
+      "first_year": "2012-13",
+      "last_year": "2019-20",
+      "states": 36,
+      "records": 266
+    },
+    {
+      "indicator": "india_cpi_inflation",
+      "first_year": "1960-61",
+      "last_year": "2025-26",
+      "states": 1,
+      "records": 66
+    },
+    {
+      "indicator": "india_gdp_current_lcu",
+      "first_year": "1960-61",
+      "last_year": "2025-26",
+      "states": 1,
+      "records": 66
+    },
+    {
+      "indicator": "india_population",
+      "first_year": "1960-61",
+      "last_year": "2025-26",
+      "states": 1,
+      "records": 66
+    },
+    {
+      "indicator": "india_population_growth",
+      "first_year": "1961-62",
+      "last_year": "2025-26",
+      "states": 1,
+      "records": 65
+    },
+    {
+      "indicator": "india_real_gdp_growth",
+      "first_year": "1961-62",
+      "last_year": "2025-26",
+      "states": 1,
+      "records": 65
+    },
+    {
+      "indicator": "india_revenue_pct_gdp",
+      "first_year": "1974-75",
+      "last_year": "2022-23",
+      "states": 1,
+      "records": 46
+    },
+    {
+      "indicator": "infant_mortality_rate",
+      "first_year": "2004-05",
+      "last_year": "2023-24",
+      "states": 37,
+      "records": 726
+    },
+    {
+      "indicator": "interest_payments",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 32,
+      "records": 661
+    },
+    {
+      "indicator": "nsdp_current",
+      "first_year": "2011-12",
+      "last_year": "2024-25",
+      "states": 34,
+      "records": 455
+    },
+    {
+      "indicator": "own_non_tax_revenue",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 32,
+      "records": 661
+    },
+    {
+      "indicator": "own_tax_revenue",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 32,
+      "records": 661
+    },
+    {
+      "indicator": "pension",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 32,
+      "records": 661
+    },
+    {
+      "indicator": "per_capita_nsdp_current",
+      "first_year": "2011-12",
+      "last_year": "2024-25",
+      "states": 34,
+      "records": 455
+    },
+    {
+      "indicator": "population",
+      "first_year": "2011-12",
+      "last_year": "2024-25",
+      "states": 34,
+      "records": 455
+    },
+    {
+      "indicator": "revenue_deficit",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 32,
+      "records": 661
+    },
+    {
+      "indicator": "revenue_expenditure",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 32,
+      "records": 661
+    },
+    {
+      "indicator": "road_length",
+      "first_year": "2004-05",
+      "last_year": "2019-20",
+      "states": 37,
+      "records": 583
+    },
+    {
+      "indicator": "social_ex_health",
+      "first_year": "2012-13",
+      "last_year": "2019-20",
+      "states": 31,
+      "records": 246
+    },
+    {
+      "indicator": "social_sector_expenditure",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 32,
+      "records": 661
+    },
+    {
+      "indicator": "total_expenditure",
+      "first_year": "2004-05",
+      "last_year": "2024-25",
+      "states": 31,
+      "records": 640
+    },
+    {
+      "indicator": "unemployment_rural",
+      "first_year": "1993-94",
+      "last_year": "2023-24",
+      "states": 38,
+      "records": 429
+    },
+    {
+      "indicator": "unemployment_urban",
+      "first_year": "1993-94",
+      "last_year": "2023-24",
+      "states": 38,
+      "records": 431
+    }
+  ]
+}

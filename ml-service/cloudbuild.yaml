@@ -1,0 +1,12 @@
+# Builds the ML service image with Cloud Build from the project root (needed because the image includes ../data).
+#   gcloud builds submit --config ml-service/cloudbuild.yaml \
+#     --substitutions=_IMAGE=REGION-docker.pkg.dev/PROJECT_ID/budget/budget-ml:latest .
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args: ["build", "-f", "ml-service/Dockerfile", "-t", "${_IMAGE}", "."]
+images:
+  - "${_IMAGE}"
+substitutions:
+  _IMAGE: ""
+options:
+  logging: CLOUD_LOGGING_ONLY

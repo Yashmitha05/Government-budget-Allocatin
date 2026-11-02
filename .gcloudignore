@@ -1,0 +1,12 @@
+# Files NOT uploaded by `gcloud builds submit` from the project root (ML service image build).
+# Unlike .gitignore, the trained seed models in ml-service/models/ ARE uploaded.
+.gcloudignore
+.git/
+.gitignore
+.env
+frontend/
+backend/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+ml-service/tests/

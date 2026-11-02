@@ -1,0 +1,43 @@
+{
+  "label": "hsis-2024-25+wdi-69898ad3",
+  "content_hash": "69898ad38fb20ef45852eab346a716be5b3e21fa788d4bb0952ccafc518e827f",
+  "built_at": "2026-10-23T13:48:14+00:00",
+  "source_files": {
+    "rbi_hsis_2024_25/T001_gross_enrolment_ratio.xlsx": "58fb80d7f1d36eb20e8b6f84a6d13f4506f273e85d3681bf56c2db032c877be7",
+    "rbi_hsis_2024_25/T004_infant_mortality_rate.xlsx": "7f5e2e5b7d6221832bf92d4f4734045773831472afb809ef2fef9f12dc845bc9",
+    "rbi_hsis_2024_25/T008_unemployment_rural.xlsx": "2e943a3b61d540183d08f31b087b7d41fa6f546677a49eccbdfc417a7a09bce0",
+    "rbi_hsis_2024_25/T009_unemployment_urban.xlsx": "4eef6c00459585c12e2f5f7e1686b9cfd5b24dd7493b9b3cfae145f876a56958",
+    "rbi_hsis_2024_25/T016_doctors_specialists.xlsx": "2e055836b4d970feb26f3432503f11b903ac3114ed9e513c306ae9c9cb4fe871",
+    "rbi_hsis_2024_25/T017_govt_hospitals_beds.xlsx": "86c53d763e425b3ae5bf70011cab7c1c771b0dbd349c753c1bd2040853905631",
+    "rbi_hsis_2024_25/T018_public_expenditure_health.xlsx": "264dafcd814a348f89d820fe3abcdf2044c4bdbea3ff3f365678a56932322d43",
+    "rbi_hsis_2024_25/T019_per_capita_nsdp_current.xlsx": "1f90818b79f1e53bfcaf90f76ef66e1db6e810ef22076791b049d429a184be15",
+    "rbi_hsis_2024_25/T021_gsdp_current.xlsx": "307860e934baa7ce60c76ef9b0086b0007a55d78730e5a77677ff49142bf8f00",
+    "rbi_hsis_2024_25/T022_gsdp_constant.xlsx": "e7afa1d2a2a227bd68a92614dcf03298da53f4d4e7acaa4b4aa1e5388f74644c",
+    "rbi_hsis_2024_25/T023_nsdp_current.xlsx": "cac54346910ebcdeb9fe783660b561d9a6233255a8d003017315cdff543e8c7b",
+    "rbi_hsis_2024_25/T108_cpi_inflation_general.xlsx": "1dd5a612f16c49f95530589072a14fdf64250aa35ac0fbf4c5a73290915e05da",
+    "rbi_hsis_2024_25/T146_length_of_roads.xlsx": "6feb02bc0ad68b079914279884dab3a4d1da6600b6fd55a8044c63279cfb5f57",
+    "rbi_hsis_2024_25/T164_gross_fiscal_deficit.xlsx": "5e1a742f710e395711ef04a4882cf933c3cf155f5496831b68ede3899e950761",
+    "rbi_hsis_2024_25/T165_revenue_deficit.xlsx": "ff52f48f02925e6ad2d5f31ffe5521b4c17d810e660ae3ca17040bcdf7f8ae50",
+    "rbi_hsis_2024_25/T166_revenue_expenditure.xlsx": "aa072942b9dc4612a20f013a1e596bac9ba1cc29a3437d8831f8924f48b43b62",
+    "rbi_hsis_2024_25/T168_own_tax_revenue.xlsx": "b25a8b6f2ff7ee06e46325ba247e5dfa3069a940c4861c3ccde9c1ce25f8f862",
+    "rbi_hsis_2024_25/T169_own_non_tax_revenue.xlsx": "9f4d1b63624f6c59adbc1b1bec17f2ee6d8605580448143ff644b9120acd813e",
+    "rbi_hsis_2024_25/T170_interest_payments.xlsx": "615f96758e437e2767d6ae4d5898afb12d7d3bb73f79e0e87fc625eae3a6393b",
+    "rbi_hsis_2024_25/T171_pension.xlsx": "0bbd608c776566cf06a5a9dbf3989721fe97caa37f4f5efc1d4d9b10bd99b8b9",
+    "rbi_hsis_2024_25/T172_capital_receipts.xlsx": "85187f7bd191d45d2570cfaf275400b8b4e023db9c32684127f2d888185ae222",
+    "rbi_hsis_2024_25/T173_capital_expenditure.xlsx": "d143de678484c6126046e30d9ea7e9b4e9909abd9e26541d71be88077622c07a",
+    "rbi_hsis_2024_25/T174_capital_outlay.xlsx": "e13247e948ec05189b6833f94a7efdd6fd6709783d6f5d086c6598f514375c97",
+    "rbi_hsis_2024_25/T175_social_sector_expenditure.xlsx": "6b8f611c50f59d287caeb7cc2946d70b040772614e405f6f06f5114ccbff989f",
+    "world_bank/FP.CPI.TOTL.ZG.json": "f715dc992715a77f762e7850ba6ecd035c4092843fcc3d94a89f838476a39715",
+    "world_bank/GC.REV.XGRT.GD.ZS.json": "5175303b2b898a31b60684223dc0dffe0a498dd17675d5f66fcdbdf85bfd03be",
+    "world_bank/NY.GDP.MKTP.CN.json": "0c0d1459bd7e52bb33769214da8b598b03b604d69c17050c4e4b34ff6bdadbd0",
+    "world_bank/NY.GDP.MKTP.KD.ZG.json": "08d522f6e102709ebc0274b73c99ba3bc2f80a693d042192c5c9508f788ff8cc",
+    "world_bank/SP.POP.GROW.json": "f370791eca26e03b988b69dc90619e77f6af1278c96a36c5374729761a6942a3",
+    "world_bank/SP.POP.TOTL.json": "5a9dfc4190514b119709916de3f6f43fe01172b491379664c37c3412fb5bacc7"
+  },
+  "record_count": 14730,
+  "panel_rows": 829,
+  "sources": [
+    "Reserve Bank of India, Handbook of Statistics on Indian States 2024-25 (released 11 Dec 2025), https://www.rbi.org.in/Scripts/AnnualPublications.aspx?head=Handbook%20of%20Statistics%20on%20Indian%20States",
+    "World Bank, World Development Indicators API, https://api.worldbank.org/v2/country/IND/indicator/"
+  ]
+}
