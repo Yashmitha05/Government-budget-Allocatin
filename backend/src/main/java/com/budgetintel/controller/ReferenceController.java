@@ -5,6 +5,7 @@ import com.budgetintel.dto.ReferenceDtos.DatasetDto;
 import com.budgetintel.dto.ReferenceDtos.DatasetImportResult;
 import com.budgetintel.dto.ReferenceDtos.IndicatorDto;
 import com.budgetintel.dto.ReferenceDtos.StateDto;
+import com.budgetintel.security.AdminOnly;
 import com.budgetintel.service.DatasetImportService;
 import com.budgetintel.service.ReferenceDataService;
 import java.util.List;
@@ -49,6 +50,7 @@ public class ReferenceController {
         return ml.impact();
     }
 
+    @AdminOnly
     @PostMapping("/admin/datasets/import")
     public DatasetImportResult importDataset() {
         return importer.importCurrent();

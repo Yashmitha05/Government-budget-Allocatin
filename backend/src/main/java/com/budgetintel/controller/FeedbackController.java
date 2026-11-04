@@ -6,6 +6,7 @@ import com.budgetintel.dto.FeedbackDtos.EvaluationResult;
 import com.budgetintel.dto.FeedbackDtos.ModelVersionDto;
 import com.budgetintel.entity.Enums.ComparisonBasis;
 import com.budgetintel.entity.Enums.ForecastKind;
+import com.budgetintel.security.AdminOnly;
 import com.budgetintel.service.FeedbackService;
 import com.budgetintel.service.ModelService;
 import java.util.List;
@@ -53,17 +54,20 @@ public class FeedbackController {
         return models.list(indicator);
     }
 
+    @AdminOnly
     @PostMapping("/models/sync")
     public List<ModelVersionDto> sync() {
         models.sync();
         return models.list(null);
     }
 
+    @AdminOnly
     @PostMapping("/models/{indicator}/retrain")
     public ModelVersionDto retrain(@PathVariable("indicator") String indicator) {
         return models.retrain(indicator);
     }
 
+    @AdminOnly
     @PostMapping("/models/{indicator}/calibrate")
     public ModelVersionDto calibrate(@PathVariable("indicator") String indicator) {
         return models.calibrate(indicator);

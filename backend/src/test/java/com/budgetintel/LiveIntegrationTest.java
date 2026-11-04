@@ -2,6 +2,7 @@ package com.budgetintel;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.budgetintel.security.AdminKeyInterceptor;
 import java.util.List;
 import java.util.Map;
 import org.junit.jupiter.api.BeforeAll;
@@ -14,6 +15,8 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -26,11 +29,14 @@ import org.springframework.test.context.ActiveProfiles;
  * Run: mvn test -Dgroups=live -DexcludedTestGroups=none
  */
 @Tag("live")
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
+        properties = "app.admin.api-key=" + LiveIntegrationTest.ADMIN_KEY)
 @ActiveProfiles("test")
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class LiveIntegrationTest {
+
+    static final String ADMIN_KEY = "live-test-admin-key-0123456789abcdef";
 
     @Autowired private TestRestTemplate http;
     @Autowired private JdbcTemplate jdbc;
@@ -45,7 +51,9 @@ class LiveIntegrationTest {
 
     @SuppressWarnings("unchecked")
     private Map<String, Object> post(String path, Object body, HttpStatus expected) {
-        ResponseEntity<Map> r = http.postForEntity(path, body, Map.class);
+        HttpHeaders headers = new HttpHeaders();
+        headers.set(AdminKeyInterceptor.HEADER, ADMIN_KEY);   // needed by the dataset import; ignored elsewhere
+        ResponseEntity<Map> r = http.postForEntity(path, new HttpEntity<>(body, headers), Map.class);
         assertThat(r.getStatusCode()).as(String.valueOf(r.getBody())).isEqualTo(expected);
         return r.getBody();
     }

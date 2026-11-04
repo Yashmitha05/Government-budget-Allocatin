@@ -6,6 +6,7 @@ import { crore, dateTime, indicatorLabel, INDICATOR_LABELS, pct, signedPct } fro
 import { modelExplain, modelName } from '../modelText';
 import { Card, Empty, ErrorState, InfoTip, Loading, MethodNote, PageHead, Segmented, Toast } from '../components/ui';
 import { PredictedVsActualChart } from '../components/Charts';
+import { useAdminKey } from '../components/AdminKey';
 
 const TARGETS = Object.keys(INDICATOR_LABELS);
 const BASIS = { ACTUAL: 'Actual result', GOVT_RE: 'State revised estimate', GOVT_BE: 'State budget estimate' };
@@ -81,7 +82,9 @@ export default function PredictionAccuracy() {
   const records = useAsync(() => api.deviations({ indicator, basis }), [indicator, basis]);
   const evaluate = useAction(() => api.evaluate());
   const forecastNow = useAction((state, ind) => api.forecast({ state_code: state, indicator: ind, horizon: 3 }));
-  const modelAction = useAction((kind, ind) => (kind === 'retrain' ? api.retrain(ind) : api.calibrate(ind)));
+  const admin = useAdminKey();
+  const modelAction = useAction((kind, ind) => admin.withAdminKey((key) => (kind === 'retrain' ? api.retrain(ind, key) : api.calibrate(ind, key))));
+  const sync = useAction(() => admin.withAdminKey((key) => api.syncModels(key)));
 
   const chartRows = useMemo(() => {
     const devs = (stateDevs.data || []).filter((d) => d.comparison_basis === 'ACTUAL' && d.horizon === 1 && d.kind === 'BACKTEST');
@@ -104,6 +107,11 @@ export default function PredictionAccuracy() {
     if (!window.confirm(msg)) return;
     const r = await modelAction.run(kind, ind);
     if (r) { setToast(`Created ${indicatorLabel(ind)} v${r.version}: ${r.active ? 'now in use' : 'kept, not used (no improvement)'}`); models.reload(); summary.reload(); }
+  };
+
+  const doSync = async () => {
+    const r = await sync.run();
+    if (r) { setToast(`Model list refreshed: ${r.length} versions`); models.reload(); summary.reload(); }
   };
 
   return (
@@ -199,8 +207,9 @@ export default function PredictionAccuracy() {
         )}
       </Card>
 
-      <Card title="Model versions" sub="Each retraining or bias correction creates a new version; the one in use is marked">
-        <ErrorState error={modelAction.error} />
+      <Card title="Model versions" sub="Each retraining or bias correction creates a new version; the one in use is marked"
+        actions={<button className="btn btn-secondary btn-small" onClick={doSync} disabled={sync.running}>{sync.running ? 'Refreshing…' : 'Refresh from ML service'}</button>}>
+        <ErrorState error={modelAction.error || sync.error} />
         {models.data && (
           <div className="table-wrap">
             <table className="data">

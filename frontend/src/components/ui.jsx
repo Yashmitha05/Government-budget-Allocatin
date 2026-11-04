@@ -93,7 +93,7 @@ const HINTS = import.meta.env.DEV ? {
 };
 
 export function ErrorState({ error, onRetry, compact }) {
-  if (!error) return null;
+  if (!error || error.code === 'ADMIN_CANCELLED') return null;   // the administrator closed the key dialog
   const hint = HINTS[error.code];
   return (
     <div className={`callout bad${compact ? '' : ''}`} role="alert">

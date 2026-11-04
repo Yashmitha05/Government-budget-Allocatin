@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './styles.css';
 import { AppProvider } from './AppContext';
+import { AdminKeyProvider } from './components/AdminKey';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import BudgetAnalysis from './pages/BudgetAnalysis';
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <AppProvider>
+        <AdminKeyProvider>
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Dashboard />} />
@@ -29,6 +31,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="*" element={<Empty title="Page not found">Use the menu on the left to choose a section.</Empty>} />
           </Route>
         </Routes>
+        </AdminKeyProvider>
       </AppProvider>
     </BrowserRouter>
   </React.StrictMode>,

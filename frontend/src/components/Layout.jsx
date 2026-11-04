@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useApp } from '../AppContext';
 import { api } from '../api';
 import { ErrorState } from './ui';
+import { AdminKeyStatus, useAdminKey } from './AdminKey';
 import { BrandMark } from './Rosette';
 
 // Grouped by what the user is doing: reading the budget, planning changes, checking the models.
@@ -24,6 +25,7 @@ const NAV = [
 
 export default function Layout() {
   const app = useApp();
+  const admin = useAdminKey();
   const [importing, setImporting] = useState(false);
   const [importError, setImportError] = useState(null);
   const noDataset = app.datasetError?.code === 'NO_DATASET';
@@ -31,7 +33,7 @@ export default function Layout() {
   const runImport = async () => {
     setImporting(true);
     setImportError(null);
-    try { await api.importDataset(); app.reloadAll(); } catch (e) { setImportError(e); }
+    try { await admin.withAdminKey((key) => api.importDataset(key)); app.reloadAll(); } catch (e) { setImportError(e); }
     setImporting(false);
   };
 
@@ -82,6 +84,7 @@ export default function Layout() {
               {importing ? 'Loading data… (about a minute)' : 'Load RBI dataset'}
             </button>
           )}
+          <AdminKeyStatus />
         </div>
         <main className="content">
           {app.statesError && <ErrorState error={app.statesError} onRetry={app.reloadAll} />}

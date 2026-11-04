@@ -11,6 +11,7 @@ import com.budgetintel.dto.AnalysisDtos.StoredForecastDto;
 import com.budgetintel.dto.AnalysisDtos.StressTestDto;
 import com.budgetintel.dto.AnalysisDtos.StressTestRequest;
 import com.budgetintel.entity.Enums.ForecastKind;
+import com.budgetintel.security.AdminOnly;
 import com.budgetintel.service.ForecastService;
 import com.budgetintel.service.OptimizationService;
 import com.budgetintel.service.ScenarioService;
@@ -81,6 +82,7 @@ public class AnalysisController {
         return scenarios.get(id);
     }
 
+    @AdminOnly
     @DeleteMapping("/scenarios/{id}")
     public ResponseEntity<Void> deleteScenario(@PathVariable("id") Long id) {
         scenarios.delete(id);

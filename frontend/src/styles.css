@@ -332,6 +332,24 @@ details.method .method-body { padding-bottom: 16px; color: var(--ink-2); font-si
 
 .pill-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
 
+/* administrator key: top-bar status and the entry dialog */
+.admin-chip { font-size: 12px; color: #d6deeb; display: inline-flex; align-items: center; gap: 8px; }
+.admin-chip::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px rgba(212, 173, 63, 0.2); }
+.topbar .btn-link { color: #c9d5ea; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+.topbar .btn-link:hover { color: #fff; }
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 60; background: rgba(13, 26, 54, 0.55);
+  display: flex; align-items: center; justify-content: center; padding: 16px;
+}
+.modal {
+  width: 100%; max-width: 420px; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow);
+  border-top: 3px solid var(--gold); padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 12px;
+}
+.modal h2 { margin: 0; font-family: var(--font-display); font-size: 20px; color: var(--ink); }
+.modal p { margin: 0; }
+.modal .input { width: 100%; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 4px; }
+
 .toast { position: fixed; right: 24px; bottom: 24px; z-index: 50; background: var(--ink); color: #fff; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 13.5px; box-shadow: 0 6px 20px rgba(20, 33, 61, 0.3); }
 
 /* ---------------------------------------------------------------- responsive */

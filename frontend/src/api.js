@@ -1,4 +1,6 @@
 // Backend REST client. All JSON is snake_case; errors arrive as {status, error, message, details}.
+// Administrative calls take the administrator key as an argument (entered at runtime, held only in React state by
+// AdminKeyProvider) and send it as X-Admin-Api-Key; no other request carries it, and this module never stores it.
 const BASE = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080/api').replace(/\/$/, '');
 
 export class ApiError extends Error {
@@ -10,12 +12,17 @@ export class ApiError extends Error {
   }
 }
 
-async function request(method, path, body) {
+export const ADMIN_HEADER = 'X-Admin-Api-Key';
+
+async function request(method, path, body, adminKey) {
+  const headers = {};
+  if (body !== undefined) headers['Content-Type'] = 'application/json';
+  if (adminKey) headers[ADMIN_HEADER] = adminKey;
   let res;
   try {
     res = await fetch(BASE + path, {
       method,
-      headers: body !== undefined ? { 'Content-Type': 'application/json' } : undefined,
+      headers: Object.keys(headers).length ? headers : undefined,
       body: body !== undefined ? JSON.stringify(body) : undefined,
     });
   } catch {
@@ -45,7 +52,7 @@ export const api = {
   states: () => request('GET', '/states'),
   indicators: () => request('GET', '/indicators'),
   dataset: () => request('GET', '/datasets/current'),
-  importDataset: () => request('POST', '/admin/datasets/import'),
+  importDataset: (adminKey) => request('POST', '/admin/datasets/import', undefined, adminKey),
   impactModels: () => request('GET', '/impact-models'),
 
   dashboard: (state) => request('GET', '/dashboard/summary' + q({ state })),
@@ -60,7 +67,7 @@ export const api = {
   scenarios: (state) => request('GET', '/scenarios' + q({ state })),
   scenario: (id) => request('GET', `/scenarios/${id}`),
   compareScenarios: (ids) => request('GET', '/scenarios/compare' + q({ ids: ids.join(',') })),
-  deleteScenario: (id) => request('DELETE', `/scenarios/${id}`),
+  deleteScenario: (id, adminKey) => request('DELETE', `/scenarios/${id}`, undefined, adminKey),
 
   optimize: (body) => request('POST', '/optimizations', body),
   optimizations: (state) => request('GET', '/optimizations' + q({ state })),
@@ -72,6 +79,7 @@ export const api = {
   accuracySummary: () => request('GET', '/feedback/summary'),
   evaluate: () => request('POST', '/feedback/evaluate'),
   models: (indicator) => request('GET', '/models' + q({ indicator })),
-  retrain: (indicator) => request('POST', `/models/${indicator}/retrain`),
-  calibrate: (indicator) => request('POST', `/models/${indicator}/calibrate`),
+  syncModels: (adminKey) => request('POST', '/models/sync', undefined, adminKey),
+  retrain: (indicator, adminKey) => request('POST', `/models/${indicator}/retrain`, undefined, adminKey),
+  calibrate: (indicator, adminKey) => request('POST', `/models/${indicator}/calibrate`, undefined, adminKey),
 };

@@ -8,6 +8,7 @@ import { Card, Empty, ErrorState, InfoTip, Loading, MethodNote, PageHead, Status
 import DeficitRuler from '../components/DeficitRuler';
 import { AllocationCompareChart } from '../components/Charts';
 import IndicatorEffects from '../components/IndicatorEffects';
+import { useAdminKey } from '../components/AdminKey';
 
 const TYPES = [
   { value: 'BALANCED', title: 'Balanced', desc: 'Return each sector to its average share of the last five actual years.' },
@@ -90,6 +91,8 @@ export default function ScenarioSimulator() {
   const [current, setCurrent] = useState(null);
   const [selected, setSelected] = useState([]);
   const [toast, setToast] = useState('');
+  const [deleteError, setDeleteError] = useState(null);
+  const admin = useAdminKey();
   const saved = useAsync(() => api.scenarios(stateCode), [stateCode]);
   const create = useAction((body) => api.createScenario(body));
   const compare = useAction((ids) => api.compareScenarios(ids));
@@ -109,7 +112,8 @@ export default function ScenarioSimulator() {
 
   const remove = async (id) => {
     if (!window.confirm('Delete this saved scenario? This cannot be undone.')) return;
-    await api.deleteScenario(id);
+    setDeleteError(null);
+    try { await admin.withAdminKey((key) => api.deleteScenario(id, key)); } catch (e) { setDeleteError(e); return; }
     if (current?.id === id) setCurrent(null);
     setSelected((s) => s.filter((x) => x !== id));
     saved.reload();
@@ -187,6 +191,7 @@ export default function ScenarioSimulator() {
           onClick={() => compare.run(selected)}>Compare selected ({selected.length})</button>}
         className="">
         {saved.error && <ErrorState error={saved.error} onRetry={saved.reload} />}
+        <ErrorState error={deleteError} />
         {saved.loading && !saved.data && <Loading height={80} />}
         {saved.data?.length === 0 && <Empty title="No saved scenarios">Scenarios you run appear here.</Empty>}
         {saved.data?.length > 0 && (

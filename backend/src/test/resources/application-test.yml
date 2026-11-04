@@ -1,3 +1,8 @@
+# Automated tests use ONLY the local test database, with their own credentials (TEST_DB_* in the root .env).
+# The production/Neon settings (DB_URL, DB_USER, DB_PASSWORD) are never read by tests:
+# TestDatabaseGuard (src/test/java/com/budgetintel/TestDatabaseGuard.java) enforces this for every test context.
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/budget_intel_test
+    username: ${TEST_DB_USER:postgres}
+    password: ${TEST_DB_PASSWORD:}

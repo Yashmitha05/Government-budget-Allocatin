@@ -91,7 +91,9 @@ cd <repo>
 
 ## 2. Neon PostgreSQL
 
-1. Create a Neon project, for example **budget-intel**, with **PostgreSQL 17**. Pick a region close to the Cloud Run region you'll use (section 4); the two should be in the same geography.
+1. Create a Neon project, for example **budget-intel**, with **PostgreSQL 17**, in **AWS Asia Pacific (Singapore), `aws-ap-southeast-1`**. This project's database is already there.
+   - Cloud Run runs in **`asia-southeast1` (Singapore)** (section 4), so the backend and database are in the same city.
+   - That keeps each database round trip short, which matters most for the one-time dataset import.
 2. In the project, create a database named **`budget_intel`**, or use the default `neondb` and adjust the name in the URL.
 3. Under **Connection details**, turn **connection pooling OFF** to get the **direct** host, which has no `-pooler` in its name. Flyway takes a session lock while migrating, so use the direct connection.
 4. Build the JDBC URL. Neon requires SSL:
@@ -125,7 +127,7 @@ Run everything below in Cloud Shell, from the repository root.
 
 ```bash
 export PROJECT_ID=<your-project-id>
-export REGION=<cloud-run-region>          # e.g. us-east4, close to your Neon region
+export REGION=asia-southeast1             # Singapore: same city as the Neon database (aws-ap-southeast-1)
 gcloud config set project "$PROJECT_ID"
 gcloud config set run/region "$REGION"
 
@@ -259,7 +261,7 @@ In the Cloudflare dashboard, go to **Workers & Pages → Create → Pages → Co
 | Root directory (advanced) | `frontend` |
 | Build command | `npm run build` |
 | Build output directory | `dist` |
-| Environment variable | `VITE_API_BASE_URL` = `<API_URL from 4.5>/api`, e.g. `https://budget-api-xxxxxxxxxx-uk.a.run.app/api` |
+| Environment variable | `VITE_API_BASE_URL` = `<API_URL from 4.5>/api`, e.g. `https://budget-api-<project-number>.asia-southeast1.run.app/api` (copy the exact URL printed in 4.5) |
 | Environment variable | `NODE_VERSION` = `22` (also set by `frontend/.nvmrc`) |
 
 `VITE_API_BASE_URL` is compiled into the site **at build time**. If you change it, start a new deployment in Pages (**Deployments → Retry deployment**).
@@ -317,6 +319,10 @@ It is safe to repeat: a dataset whose content hash is already stored is not impo
 | `ML_AUTH_GCP_ID_TOKEN` | yes on Cloud Run | `true` | Adds a Google ID token for the private ML service |
 | `ML_TIMEOUT_MS` | no | `120000` | Read timeout for ML calls |
 | `CORS_ALLOWED_ORIGINS` | **yes** | `https://budget-intel.pages.dev,https://*.budget-intel.pages.dev` | Comma-separated origins or patterns |
+
+**Not for Cloud Run:** `TEST_DB_USER` / `TEST_DB_PASSWORD` in the local `.env` are used only by `mvn test`.
+
+Tests always run against the local `budget_intel_test` database. `TestDatabaseGuard`, which exists only on the test classpath, replaces any other database setting and refuses to start a test against anything that is not a localhost `*_test` database, so tests can never reach Neon.
 
 ### ML service: `budget-ml`
 
