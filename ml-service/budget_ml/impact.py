@@ -13,10 +13,15 @@ not causal effects.
 """
 from __future__ import annotations
 
+import json
+import logging
 from dataclasses import asdict, dataclass
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
+log = logging.getLogger("ml-service.impact")
 
 ELIGIBLE_CATEGORIES = ("STATE", "UT_LEGISLATURE")
 N_BOOT = 999
@@ -137,6 +142,36 @@ def estimate(panel: pd.DataFrame, spec: ImpactSpec, categories: dict[str, str], 
 
 def estimate_all(panel: pd.DataFrame, categories: dict[str, str]) -> list[ImpactResult]:
     return [estimate(panel, s, categories) for s in SPECS]
+
+
+CACHE_FILE = "impact_results.json"
+
+
+def cache_key(dataset_hash: str) -> dict:
+    """Everything the results depend on: the data and the estimation settings (the bootstrap seed is fixed)."""
+    return {"dataset_hash": dataset_hash, "n_boot": N_BOOT, "ci_level": CI_LEVEL, "seed": 0,
+            "eligible_categories": list(ELIGIBLE_CATEGORIES), "specs": [asdict(s) for s in SPECS]}
+
+
+def load_or_estimate(panel: pd.DataFrame, categories: dict[str, str], cache_path: Path, dataset_hash: str) -> list[dict]:
+    """Results of estimate_all, reused from cache_path when it was computed for the same data and settings.
+
+    The estimation is deterministic, so a matching cache gives identical results; it only avoids repeating
+    ~4,000 regression fits at every service start. A missing or stale cache is recomputed and rewritten.
+    """
+    key = cache_key(dataset_hash)
+    try:
+        cached = json.loads(cache_path.read_text(encoding="utf-8"))
+        if cached.get("key") == key:
+            return cached["results"]
+    except (OSError, ValueError, KeyError):
+        pass
+    results = [r.as_dict() for r in estimate_all(panel, categories)]
+    try:
+        cache_path.write_text(json.dumps({"key": key, "results": results}, indent=2), encoding="utf-8")
+    except OSError as exc:   # read-only filesystem: still correct, just recomputed next start
+        log.warning("could not write impact cache %s: %s", cache_path, exc)
+    return results
 
 
 def predict_outcome(result: dict, baseline_outcome: float, baseline_spend: float, scenario_spend: float) -> dict:

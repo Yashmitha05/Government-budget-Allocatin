@@ -1,0 +1,124 @@
+{
+  "key": {
+    "dataset_hash": "69898ad38fb20ef45852eab346a716be5b3e21fa788d4bb0952ccafc518e827f",
+    "n_boot": 999,
+    "ci_level": 0.9,
+    "seed": 0,
+    "eligible_categories": [
+      "STATE",
+      "UT_LEGISLATURE"
+    ],
+    "specs": [
+      {
+        "key": "health_imr",
+        "sector": "health",
+        "spend_col": "health_expenditure_per_capita",
+        "outcome": "infant_mortality_rate",
+        "outcome_name": "Infant mortality rate (per 1,000 live births)",
+        "expected_sign": -1,
+        "lag": 1,
+        "higher_is_better": false
+      },
+      {
+        "key": "social_imr",
+        "sector": "social_sector",
+        "spend_col": "social_sector_expenditure_per_capita",
+        "outcome": "infant_mortality_rate",
+        "outcome_name": "Infant mortality rate (per 1,000 live births)",
+        "expected_sign": -1,
+        "lag": 1,
+        "higher_is_better": false
+      },
+      {
+        "key": "capital_roads",
+        "sector": "capital_outlay",
+        "spend_col": "capital_outlay_per_capita",
+        "outcome": "road_length",
+        "outcome_name": "Road length (km)",
+        "expected_sign": 1,
+        "lag": 1,
+        "higher_is_better": true
+      },
+      {
+        "key": "capital_unemp_urban",
+        "sector": "capital_outlay",
+        "spend_col": "capital_outlay_per_capita",
+        "outcome": "unemployment_urban",
+        "outcome_name": "Urban unemployment rate (per 1,000)",
+        "expected_sign": -1,
+        "lag": 1,
+        "higher_is_better": false
+      }
+    ]
+  },
+  "results": [
+    {
+      "key": "health_imr",
+      "sector": "health",
+      "outcome": "infant_mortality_rate",
+      "outcome_name": "Infant mortality rate (per 1,000 live births)",
+      "elasticity": 0.08773341506576794,
+      "ci_low": -0.1144740801624289,
+      "ci_high": 0.36820703479988387,
+      "n_obs": 242,
+      "n_states": 31,
+      "years": "2012-2019 (spending year)",
+      "within_r2": 0.12340865875575191,
+      "supported": false,
+      "expected_sign": -1,
+      "higher_is_better": false,
+      "note": "not supported: interval includes zero"
+    },
+    {
+      "key": "social_imr",
+      "sector": "social_sector",
+      "outcome": "infant_mortality_rate",
+      "outcome_name": "Infant mortality rate (per 1,000 live births)",
+      "elasticity": -0.007789661839803374,
+      "ci_low": -0.33036581920278585,
+      "ci_high": 0.2422869607232043,
+      "n_obs": 364,
+      "n_states": 31,
+      "years": "2011-2022 (spending year)",
+      "within_r2": 0.10032423866297657,
+      "supported": false,
+      "expected_sign": -1,
+      "higher_is_better": false,
+      "note": "not supported: interval includes zero"
+    },
+    {
+      "key": "capital_roads",
+      "sector": "capital_outlay",
+      "outcome": "road_length",
+      "outcome_name": "Road length (km)",
+      "elasticity": 0.06141808853202896,
+      "ci_low": -0.08827868822456722,
+      "ci_high": 0.22005089898345231,
+      "n_obs": 242,
+      "n_states": 31,
+      "years": "2011-2018 (spending year)",
+      "within_r2": 0.03173543725338657,
+      "supported": false,
+      "expected_sign": 1,
+      "higher_is_better": true,
+      "note": "not supported: interval includes zero"
+    },
+    {
+      "key": "capital_unemp_urban",
+      "sector": "capital_outlay",
+      "outcome": "unemployment_urban",
+      "outcome_name": "Urban unemployment rate (per 1,000)",
+      "elasticity": 0.04227516558565016,
+      "ci_low": -0.10860883717913723,
+      "ci_high": 0.1947766931483489,
+      "n_obs": 214,
+      "n_states": 31,
+      "years": "2016-2022 (spending year)",
+      "within_r2": 0.0026053962983505485,
+      "supported": false,
+      "expected_sign": -1,
+      "higher_is_better": false,
+      "note": "not supported: interval includes zero"
+    }
+  ]
+}

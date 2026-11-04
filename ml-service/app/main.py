@@ -4,7 +4,8 @@ Run:  uvicorn app.main:app --port 8000   (from ml-service/)
 
 Production settings (environment):
   ML_API_KEY  when set, every endpoint except /health requires the header X-ML-Api-Key with this value,
-              so only the backend can call the service.
+              so only the backend can call the service. Required (>= 32 chars) when RENDER=true (set by
+              Render automatically) or ML_REQUIRE_API_KEY=true; the service then refuses to start without it.
   R2_*        model registry persisted in Cloudflare R2 (see budget_ml/artifact_store.py).
 """
 from __future__ import annotations
@@ -61,12 +62,19 @@ def _error(status: int, code: str, message: str, details: list | None = None) ->
 
 
 PUBLIC_PATHS = {"/health"}   # liveness only; reveals no budget data
+MIN_KEY_LENGTH = 32
 _FROM_ENV = object()
 
 
 def create_app(processed_dir: Path = PROCESSED_DIR, model_root: Path = MODEL_DIR,
                api_key: str | None | object = _FROM_ENV, artifact_store: ArtifactStore | None | object = _FROM_ENV) -> FastAPI:
     key = (os.environ.get("ML_API_KEY") or None) if api_key is _FROM_ENV else api_key
+    # A hosted deployment must never run open: Render sets RENDER=true in every service; other hosts can set
+    # ML_REQUIRE_API_KEY=true. Local development (neither set) keeps working without a key.
+    if os.environ.get("RENDER") == "true" or os.environ.get("ML_REQUIRE_API_KEY", "").lower() == "true":
+        if not key or len(key) < MIN_KEY_LENGTH:
+            raise RuntimeError(f"ML_API_KEY must be set to a random secret of at least {MIN_KEY_LENGTH} characters "
+                               "in hosted deployments (e.g. generate one with: openssl rand -hex 32)")
 
     @asynccontextmanager
     async def lifespan(app: FastAPI):

@@ -89,6 +89,27 @@ def test_service_key_required_except_health(processed, tmp_path):
         assert c.get("/models", headers={"X-ML-Api-Key": "s3cret"}).status_code == 200
 
 
+@pytest.mark.parametrize("flag", [("RENDER", "true"), ("ML_REQUIRE_API_KEY", "true")])
+def test_hosted_deployment_refuses_to_start_without_a_strong_key(monkeypatch, flag):
+    from app.main import create_app
+    monkeypatch.setenv(*flag)
+    monkeypatch.delenv("ML_API_KEY", raising=False)
+    with pytest.raises(RuntimeError, match="ML_API_KEY"):
+        create_app(api_key=None, artifact_store=None)
+    with pytest.raises(RuntimeError):
+        create_app(api_key="too-short", artifact_store=None)
+    create_app(api_key="x" * 32, artifact_store=None)          # long enough: builds (startup not run here)
+
+
+def test_impact_cache_reused_only_for_matching_dataset(tmp_path, processed):
+    from budget_ml.impact import cache_key, load_or_estimate
+    import json
+    path = tmp_path / "impact_results.json"
+    marker = [{"key": "x", "supported": False}]
+    path.write_text(json.dumps({"key": cache_key("hash-A"), "results": marker}))
+    assert load_or_estimate(None, {}, path, "hash-A") == marker          # matching key: cache returned as-is
+
+
 def test_retrained_version_survives_a_container_restart(processed, tmp_path):
     from app.main import create_app
     s3 = FakeS3()

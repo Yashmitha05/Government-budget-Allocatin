@@ -9,7 +9,7 @@ from pathlib import Path
 import pandas as pd
 
 from budget_ml.config import GER_FILE, ML_ROOT, MODEL_DIR, PROCESSED_DIR, TABLES
-from budget_ml.impact import estimate_all
+from budget_ml.impact import CACHE_FILE, load_or_estimate
 from budget_ml.preprocessing import DERIVED_COLUMNS, FORECAST_TARGETS, load_processed
 from budget_ml.registry import active_version
 from budget_ml.states import load_states
@@ -41,8 +41,9 @@ class ServiceState:
         self.quality: dict = quality
         self.states = states
         self.categories = {c: s.category for c, s in states.items()}
-        log.info("estimating impact models for dataset %s", meta["label"])
-        self.impact_results = [r.as_dict() for r in estimate_all(panel, self.categories)]
+        log.info("loading impact models for dataset %s", meta["label"])
+        self.impact_results = load_or_estimate(panel, self.categories, self.processed_dir / CACHE_FILE,
+                                               meta["content_hash"])
         bt = ML_ROOT / "reports" / "backtest_predictions.csv"
         self.backtest = pd.read_csv(bt) if bt.exists() else pd.DataFrame()
 
